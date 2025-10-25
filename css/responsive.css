@@ -80,6 +80,7 @@
     .event__content {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
+        min-height: auto;
     }
     
     .story__text {

@@ -5,17 +5,19 @@
 
 /* Variables CSS */
 :root {
-    /* Colores principales - Basados en el diseño original */
-    --color-primary: #2C5A4A;        /* Verde oscuro más profundo */
-    --color-secondary: #3A6B5A;      /* Verde medio más elegante */
-    --color-accent: #6B8B7A;         /* Verde claro suave */
-    --color-gold: #B8860B;           /* Dorado más sutil */
-    --color-cream: #F8F6F0;          /* Crema más cálida */
+    /* Colores principales - Paleta moderna y elegante */
+    --color-primary: #1B4D3E;        /* Verde oscuro profundo */
+    --color-secondary: #2D5A4A;      /* Verde medio elegante */
+    --color-accent: #4A7C59;         /* Verde claro suave */
+    --color-gold: #D4AF37;           /* Dorado elegante */
+    --color-cream: #FEFCF8;          /* Crema muy suave */
     --color-white: #FFFFFF;
-    --color-black: #1A1A1A;           /* Negro más suave */
-    --color-gray: #5A5A5A;           /* Gris más elegante */
-    --color-light-gray: #F5F5F5;
-    --color-text: #2C2C2C;          /* Color de texto principal */
+    --color-black: #0F0F0F;          /* Negro profundo */
+    --color-gray: #6B7280;           /* Gris moderno */
+    --color-light-gray: #F8FAFC;     /* Gris muy claro */
+    --color-text: #1F2937;          /* Color de texto principal */
+    --color-border: #E5E7EB;        /* Bordes sutiles */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Sombras suaves */
     
     /* Tipografías */
     --font-primary: 'Cormorant Garamond', serif;    /* Títulos elegantes */

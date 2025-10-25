@@ -8,7 +8,7 @@ const MUSIC_CONFIG = {
     volume: 0.3, // Volumen bajo para no ser intrusivo
     fadeInDuration: 2000, // 2 segundos para fade in
     fadeOutDuration: 1000, // 1 segundo para fade out
-    autoPlay: false, // No reproducir automáticamente (requiere interacción del usuario)
+    autoPlay: true, // Reproducir automáticamente al cargar
     loop: true
 };
 
@@ -49,6 +49,13 @@ function initMusic() {
     audio.addEventListener('canplay', function() {
         console.log('Música lista para reproducir');
         showMusicControls();
+        
+        // Auto-reproducir si está habilitado
+        if (MUSIC_CONFIG.autoPlay) {
+            setTimeout(() => {
+                playMusic();
+            }, 1000); // Esperar 1 segundo para que la página cargue completamente
+        }
     });
     
     audio.addEventListener('error', function(e) {
