@@ -96,9 +96,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-cream) 0%, #F0F0F0 100%);
+    background: var(--color-cream);
     position: relative;
     overflow: hidden;
+    padding: var(--spacing-4xl) 0;
 }
 
 .hero::before {
@@ -133,9 +134,9 @@
 }
 
 .ring {
-    width: 60px;
-    height: 60px;
-    border: 3px solid var(--color-primary);
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
     position: relative;
     animation: float 3s ease-in-out infinite;
@@ -143,23 +144,52 @@
 
 .ring:nth-child(2) {
     animation-delay: 1.5s;
+    border: 2px solid var(--color-primary);
+    position: relative;
 }
 
-.ring::before {
+.ring:nth-child(2)::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-color: var(--color-gold);
     border-radius: 50%;
+}
+
+.ring:first-child::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.heart {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: var(--color-gold);
+    animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
 }
 
 .hero__title {
@@ -250,6 +280,29 @@
     color: var(--color-primary);
     margin-bottom: var(--spacing-xl);
     text-align: center;
+    position: relative;
+}
+
+.story__title::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.story__title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-primary);
 }
 
 .story__paragraph {
@@ -356,6 +409,14 @@
     right: 0;
 }
 
+.event__title::before {
+    background: linear-gradient(to right, var(--color-primary), transparent);
+}
+
+.event__title::after {
+    background: linear-gradient(to left, var(--color-primary), transparent);
+}
+
 .event__info {
     display: flex;
     flex-direction: column;
@@ -451,6 +512,29 @@
     font-size: var(--font-size-5xl);
     color: var(--color-primary);
     margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.rsvp__title::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.rsvp__title::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-primary);
 }
 
 .rsvp__message {
@@ -538,6 +622,7 @@
 
 .footer__decoration {
     position: relative;
+    margin: var(--spacing-lg) 0;
 }
 
 .olive-branches {
@@ -545,10 +630,11 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-lg);
+    position: relative;
 }
 
 .branch {
-    width: 40px;
+    width: 50px;
     height: 2px;
     background-color: var(--color-white);
     position: relative;
@@ -557,23 +643,31 @@
 .branch::before {
     content: '';
     position: absolute;
-    top: -8px;
-    left: 10px;
-    width: 20px;
+    top: -6px;
+    left: 15px;
+    width: 15px;
     height: 2px;
     background-color: var(--color-white);
-    transform: rotate(45deg);
+    transform: rotate(30deg);
 }
 
 .branch::after {
     content: '';
     position: absolute;
-    top: 8px;
-    left: 10px;
-    width: 20px;
+    top: 6px;
+    left: 15px;
+    width: 15px;
     height: 2px;
     background-color: var(--color-white);
-    transform: rotate(-45deg);
+    transform: rotate(-30deg);
+}
+
+.branch.left {
+    transform: rotate(-5deg);
+}
+
+.branch.right {
+    transform: rotate(5deg);
 }
 
 .footer__text {
