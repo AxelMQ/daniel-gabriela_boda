@@ -234,6 +234,8 @@
     
     .story__img {
         height: 250px;
+        object-fit: cover;
+        object-position: center;
     }
     
     /* Event móvil */
@@ -261,6 +263,8 @@
     
     .event__img {
         height: 200px;
+        object-fit: cover;
+        object-position: center;
     }
     
     .info__title {
@@ -307,6 +311,13 @@
     
     .rsvp__blessing {
         font-size: var(--font-size-base);
+    }
+    
+    .rsvp__img {
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
     }
     
     /* Footer móvil */
