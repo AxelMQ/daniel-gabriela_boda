@@ -474,6 +474,26 @@
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+}
+
+.rsvp__image {
+    margin-bottom: var(--spacing-2xl);
+    display: flex;
+    justify-content: center;
+}
+
+.rsvp__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-normal);
+}
+
+.rsvp__img:hover {
+    transform: scale(1.05);
 }
 
 .rsvp__decoration {
