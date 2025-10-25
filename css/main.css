@@ -18,9 +18,10 @@
     --color-text: #2C2C2C;          /* Color de texto principal */
     
     /* Tipografías */
-    --font-primary: 'Playfair Display', serif;      /* Títulos elegantes */
+    --font-primary: 'Cormorant Garamond', serif;    /* Títulos elegantes */
     --font-secondary: 'Open Sans', sans-serif;      /* Texto general */
-    --font-script: 'Dancing Script', cursive;       /* Texto decorativo */
+    --font-script: 'Great Vibes', cursive;         /* Texto decorativo */
+    --font-elegant: 'Playfair Display', serif;      /* Texto elegante */
     
     /* Tamaños de fuente */
     --font-size-xs: 0.75rem;    /* 12px */
