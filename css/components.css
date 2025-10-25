@@ -885,24 +885,41 @@
     font-weight: 600;
 }
 
+.rsvp__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
 .rsvp__btn {
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: var(--color-white);
-    border: none;
     padding: var(--spacing-lg) var(--spacing-3xl);
     font-size: var(--font-size-lg);
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     transition: all var(--transition-normal);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    margin-bottom: var(--spacing-xl);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-md);
     position: relative;
     overflow: hidden;
+    border: none;
+    width: 100%;
+}
+
+.rsvp__btn--whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.rsvp__btn--form {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(27, 77, 62, 0.3);
 }
 
 .rsvp__btn::before {
@@ -920,10 +937,16 @@
     left: 100%;
 }
 
-.rsvp__btn:hover {
+.rsvp__btn--whatsapp:hover {
     background: linear-gradient(135deg, #128C7E, #25D366);
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+.rsvp__btn--form:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(27, 77, 62, 0.4);
 }
 
 .btn-icon {
