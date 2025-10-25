@@ -237,6 +237,7 @@
         height: 250px;
         object-fit: cover;
         object-position: center;
+        margin-top: var(--spacing-md);
     }
     
     /* Event móvil */
@@ -266,6 +267,7 @@
         height: 200px;
         object-fit: cover;
         object-position: center;
+        margin-top: var(--spacing-md);
     }
     
     .info__title {
@@ -315,8 +317,8 @@
     }
     
     .rsvp__img {
-        width: 300px;
-        height: 200px;
+        width: 280px;
+        height: 180px;
         object-fit: cover;
         object-position: center;
     }
