@@ -202,9 +202,27 @@
         </div>
     </div>
 
+    <!-- Audio de fondo -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/audio/wedding-music.mp3" type="audio/mpeg">
+        <source src="assets/audio/wedding-music.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Controles de música -->
+    <div class="music-controls">
+        <button id="playMusic" class="music-btn" title="Reproducir música">
+            <span class="music-icon">🎵</span>
+        </button>
+        <button id="pauseMusic" class="music-btn" title="Pausar música" style="display: none;">
+            <span class="music-icon">⏸️</span>
+        </button>
+    </div>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/rsvp.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/music.js"></script>
 </body>
 </html>
