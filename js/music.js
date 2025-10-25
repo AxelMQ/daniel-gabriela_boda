@@ -53,8 +53,16 @@ function initMusic() {
         // Auto-reproducir si está habilitado
         if (MUSIC_CONFIG.autoPlay) {
             setTimeout(() => {
-                playMusic();
-            }, 1000); // Esperar 1 segundo para que la página cargue completamente
+                audio.play().then(() => {
+                    isPlaying = true;
+                    updateMusicControls();
+                    console.log('Música iniciada automáticamente');
+                }).catch(error => {
+                    console.log('No se pudo reproducir automáticamente:', error);
+                    // Mostrar controles para que el usuario pueda reproducir manualmente
+                    showMusicControls();
+                });
+            }, 2000); // Esperar 2 segundos para que la página cargue completamente
         }
     });
     
